@@ -1,24 +1,15 @@
 import { Reducer } from "react";
 import Produce from 'immer';
-import { Action } from "redux";
-import { ICartState, IProduct } from "./types";
+import { ICartState } from "./types";
 
 const INITIAL_STATE: ICartState  = {
     items: []
 }
 
-interface payload {
-   product: IProduct 
-}
-interface IAction extends Action {
-    payload: payload;
-}
-
-
 const cart: Reducer<ICartState, any> = (state = INITIAL_STATE, action) => {
     return Produce(state, draft => {
         switch(action.type) {
-            case "ADD_PRODUCT_TO_CART": {
+            case "ADD_PRODUCT_TO_CART_SUCCESS": {
                 const { product } = action.payload
 
                 const productInCartIndex = draft.items.findIndex(item => item.product.id === product.id)
