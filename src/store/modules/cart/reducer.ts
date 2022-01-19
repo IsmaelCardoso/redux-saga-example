@@ -14,14 +14,16 @@ interface IAction extends Action {
 }
 
 
-const cart: Reducer<ICartState, IAction> = (state = INITIAL_STATE, action) => {
+const cart: Reducer<ICartState, any> = (state = INITIAL_STATE, action) => {
     switch(action.type) {
         case "ADD_PRODUCT_TO_CART": {
             const { product } = action.payload
 
+            console.log("product", action)
+
             return {
                 ...state,
-                itens: [
+                items: [
                     ...state.items,
                     {
                         product,

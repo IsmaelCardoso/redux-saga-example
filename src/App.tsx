@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStoreHook, Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 
 import store from './store';
 

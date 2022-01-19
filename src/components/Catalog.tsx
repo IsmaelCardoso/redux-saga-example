@@ -24,9 +24,9 @@ const Catalog = () => {
             <h1>Catalog</h1>
 
             {catalog.map(product => (
-                <article key={product.id}>
-                    <strong>{product.title}</strong> {" - "}
-                    <span>{product.price}</span> {" "}
+                <article key={product?.id}>
+                    <strong>{product?.title}</strong> {" - "}
+                    <span>{product?.price}</span> {" "}
 
                     <button 
                     type="button" 
