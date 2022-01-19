@@ -7,7 +7,10 @@ const INITIAL_STATE: ICartState  = {
 }
 
 
-const cart: Reducer<ICartState, Action> = () => {
+const cart: Reducer<ICartState, Action> = (state, action) => {
+    console.log("state", state)
+    console.log("action", action)
+
     return INITIAL_STATE;
 }
 
