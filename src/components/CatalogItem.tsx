@@ -20,8 +20,8 @@ const CatalogItem: React.FC<CatalogItemProps> = ({ product }) => {
             <span>{product?.price}</span> {" "}
 
             <button 
-            type="button" 
-            onClick={handleAddProductToCart}
+                type="button" 
+                onClick={handleAddProductToCart}
             >
                 Comprar
             </button>
